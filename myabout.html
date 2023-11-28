@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1." />
+
+    <link rel="stylesheet" href="myabout.css" />
+
+    <title>MMPV-About</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Courier+Prime&family=Inter:wght@100&family=Poppins:wght@100&family=Roboto:wght@100&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="shortcut icon"
+      href="Images/icons/FAVICON.png"
+      type="image/x-icon"
+    />
+    <style>
+      body {
+        background-color: rgba(93, 93, 93, 0.352);
+        z-index: -1;
+      }
+      .carousel-item {
+        filter: brightness(0.7);
+      }
+      .nav {
+        background-color: rgb(255, 255, 255);
+        width: 100;
+        height: 70px;
+      }
+      .nav-link {
+        color: rgb(29, 29, 29);
+      }
+      .nav-link:hover {
+        background-color: rgb(26, 26, 26);
+        color: rgb(218, 218, 218);
+        transition: 1s;
+      }
+      .img-fluid {
+        filter: brightness(0.7);
+        z-index: -5;
+      }
+      .navbar-brand {
+        margin: 0%;
+        padding: 0%;
+      }
+      .content {
+        height: 100vh;
+        width: 100%;
+        filter: brightness(0.7);
+        background-image: url(Images/images-mm/m-me.jpg);
+        background-size: cover;
+        background-position-x: center;
+        background-repeat: no-repeat;
+        transition: 1s;
+        animation-name: animate;
+        animation-direction: alternate-reverse;
+        animation-play-state: running;
+        animation-timing-function: ease-in-out;
+        animation-duration: 20s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+      }
+
+      @keyframes animate {
+        0% {
+          background-image: url(Images/hero2.jpeg);
+        }
+        20% {
+          background-image: url(Images/images-mm/frontview-motorbike.jpg);
+        }
+        40% {
+          background-image: url(Images/images-mm/m-national_museum.jpg);
+        }
+        60% {
+          background-image: url(Images/images-mm/m-lifeboat.jpg);
+        }
+        80% {
+          background-image: url(Images/images-mm/moon.jpg);
+        }
+        100% {
+          background-image: url(Images/hero1.jpeg);
+        }
+      }
+
+      .fade-in-image {
+        filter: brightness(0.7);
+        animation: fadeIn 200000s;
+        -webkit-animation: fadeIn 5s;
+        -moz-animation: fadeIn 5s;
+        -o-animation: fadeIn 5s;
+        -ms-animation: fadeIn 5s;
+      }
+
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        10% {
+          opacity: 0;
+        }
+      }
+
+      @-moz-keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        20% {
+          opacity: 0;
+        }
+      }
+
+      @-webkit-keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        30% {
+          opacity: 0;
+        }
+      }
+
+      @-o-keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        40% {
+          opacity: 0;
+        }
+      }
+
+      @-ms-keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      .fade-in-text {
+        font-family: "Roboto", sans-serif;
+        color: rgb(54, 54, 54);
+        font-weight: 900;
+        font-size: 70px;
+        animation: fadeIn 10s;
+        -webkit-animation: fadeIn 10s;
+        -moz-animation: fadeIn 10s;
+        -o-animation: fadeIn 10s;
+        -ms-animation: fadeIn 10s;
+      }
+
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        0% {
+          opacity: 1;
+        }
+      }
+
+      @-moz-keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        0% {
+          opacity: 1;
+        }
+      }
+
+      @-webkit-keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        0% {
+          opacity: 1;
+        }
+      }
+
+      @-o-keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        0% {
+          opacity: 1;
+        }
+      }
+
+      @-ms-keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      .navbar-brand {
+        font-family: "Encode Sans", sans-serif;
+      }
+
+      .animate-on-scroll {
+        opacity: 0;
+
+        transition: all 1s ease-out;
+        transition-delay: 0.2s;
+      }
+      .animate {
+        opacity: 1;
+        transform: translateX(0);
+      }
+
+      .collapse a.active {
+        background-color: gray;
+        color: rgb(40, 40, 40);
+      }
+      .autocomplete {
+        /*the container must be positioned relative:*/
+        position: relative;
+        display: inline-block;
+      }
+      input {
+        border: 1px solid transparent;
+        background-color: #f1f1f1;
+        padding: 10px;
+        font-size: 16px;
+      }
+      input[type="text"] {
+        background-color: #f1f1f1;
+        width: 100%;
+      }
+      input[type="submit"] {
+        background-color: DodgerBlue;
+        color: #fff;
+      }
+      .autocomplete-items {
+        position: absolute;
+        border: 1px solid #d4d4d4;
+        border-bottom: none;
+        border-top: none;
+        z-index: 99;
+        /*position the autocomplete items to be the same width as the container:*/
+        top: 100%;
+        left: 0;
+        right: 0;
+      }
+      .autocomplete-items div {
+        padding: 10px;
+        cursor: pointer;
+        background-color: #fff;
+        border-bottom: 1px solid #d4d4d4;
+      }
+      .autocomplete-items div:hover {
+        /*when hovering an item:*/
+        background-color: #e9e9e9;
+      }
+      .autocomplete-active {
+        /*when navigating through the items using the arrow keys:*/
+        background-color: DodgerBlue !important;
+        color: #ffffff;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar 3 -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img
+            src="Images/icons/MM LOGO Final.png"
+            alt="Logo"
+            width="50"
+            height="44"
+            class="d-inline-block align-text-center"
+          />
+          <normal
+            style="
+              font-family: system-ui, -apple-system, BlinkMacSystemFont,
+                'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+                'Helvetica Neue', sans-serif;
+              padding-top: 10px;
+              margin-left: 10px;
+            "
+            >Migz Media PV</normal
+          >
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                aria-current="page"
+                href="../bootcamp1/home.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                aria-current="page"
+                href="../bootcamp1/mygenre.html"
+                >Genres</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="../bootcamp1/myabout.html"
+                >About</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../bootcamp1/mycontact.html">Contact</a>
+            </li>
+
+            <li class="nav-item me-5">
+              <a class="nav-link" href="../bootcamp1/mycareer.html">Careers</a>
+            </li>
+          </ul>
+
+          <form
+            autocomplete="off"
+            action="/action_page.php"
+            class="d-flex"
+            role="search"
+          >
+            <div class="autocomplete" style="width: 300px">
+              <input
+                id="myInput"
+                type="text"
+                name="myCountry"
+                placeholder="Search"
+              />
+            </div>
+            <button class="btn btn-outline-secondary" type="submit">
+              Search
+            </button>
+          </form>
+          <!-- <form class="d-flex" role="search">
+            <input
+              class="form-secondary"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-secondary" type="submit">
+              Search
+            </button>
+          </form> -->
+        </div>
+      </div>
+    </nav>
+    <!-- space -->
+    <div class="d-flex" style="height: 95px">
+      <div class="vr"></div>
+    </div>
+
+    <div class="animate-on-scroll">
+      <figure class="text-center">
+        <blockquote class="blockquote">
+          <h1 class="quote display-1">The Crew</h1>
+        </blockquote>
+      </figure>
+    </div>
+    <!-- space -->
+    <div class="d-flex" style="height: 1px">
+      <div class="vr"></div>
+    </div>
+
+    <div class="animate-on-scroll">
+      <div class="fade-in-image text-center">
+        <img
+          src="../bootcamp1/Images/images-mm/EDgear9.png"
+          class="img-fluid"
+          alt="miniature"
+          style="filter: brightness(0.7); opacity: 0.9"
+        />
+      </div>
+    </div>
+    <!-- space -->
+    <div class="d-flex" style="height: 450px">
+      <div class="vr"></div>
+    </div>
+    <!-- images for about -->
+    <div class="animate-on-scroll">
+      <div class="fade-in-image text-center w-70">
+        <img
+          src="Images/images-mm/m-me.jpg"
+          class="img-fluid w-70 mx-auto d-block"
+          alt="man"
+        />
+      </div>
+    </div>
+    <!-- space -->
+    <div class="d-flex" style="height: 170px">
+      <div class="vr"></div>
+    </div>
+
+    <!-- images for about -->
+    <div class="animate-on-scroll">
+      <div class="fade-in-image text-center w-70">
+        <img
+          src="../bootcamp1/Images/images-mm/bro.jpg"
+          class="img-fluid w-70 mx-auto d-block"
+          alt="man"
+          style="filter: saturate(0)"
+        />
+      </div>
+    </div>
+
+    <!-- space -->
+    <div class="d-flex" style="height: 140px">
+      <div class="vr"></div>
+    </div>
+
+    <!-- space -->
+    <div class="d-flex" style="height: 200px">
+      <div class="vr"></div>
+    </div>
+
+    <!-- space -->
+    <div class="d-flex" style="height: 200px">
+      <div class="vr"></div>
+    </div>
+    <!-- quote -->
+
+    <div class="animate-on-scroll">
+      <figure class="text-center">
+        <blockquote class="blockquote">
+          <h1 class="quote display-3">
+            Turning moments into lifelong memories.
+          </h1>
+        </blockquote>
+      </figure>
+    </div>
+    <!-- space -->
+    <div class="d-flex" style="height: 200px">
+      <div class="vr"></div>
+    </div>
+
+    <!-- space -->
+
+    <div class="d-flex" style="height: 200px">
+      <div class="vr"></div>
+    </div>
+
+    <!-- about us section -->
+
+    <div class="animate-on-scroll mt-5">
+      <h2 class="fade-in-text text-center display-1">About Us</h2>
+    </div>
+    <!-- space -->
+    <div class="d-flex" style="height: 150px">
+      <div class="vr"></div>
+    </div>
+    <h3 style="text-align: center">
+      Welcome To <span id="W_Name1">Migz Media</span>
+    </h3>
+    <p class="para col-lg-8 text-center offset-lg-2">
+      <span id="W_Name2">Migz Media</span> is a Professional
+      <span id="W_Type1">Photography and videography</span> Platform. Here we
+      will provide you only interesting content, which you will like very much.
+      We're dedicated to providing you the best of
+      <span id="W_Type2">Photography and videography</span>, with a focus on
+      dependability and
+      <span id="W_Spec">serving events, weddings, portraits, and many more</span
+      >. We're working to turn our passion for
+      <span id="W_Type3">Photography and videography</span> into a booming
+      <a
+        href="https://www.blogearns.com/2021/05/free-about-us-page-generator.html"
+        rel="do-follow"
+        style="color: inherit; text-decoration: none"
+        >online website</a
+      >. We hope you enjoy our
+      <span id="W_Type4">Photography and videography</span> as much as we enjoy
+      offering them to you.
+    </p>
+    <p style="text-align: center">
+      I will keep posting more important posts on my Website for all of you.
+      Please give your support and love.
+    </p>
+    <p style="font-weight: bold; text-align: center">
+      Thanks For Visiting Our Site<br /><br />
+    </p>
+    <!-- space -->
+    <div class="d-flex" style="height: 300px">
+      <div class="vr"></div>
+    </div>
+
+    <div class="container">
+      <div class="col-lg-4 offset-lg-4">
+        <div class="input-group">
+          <span class="input-group-text">
+            Lets catch up, <br />drop us a message
+          </span>
+          <textarea class="form-control" aria-label="With textarea"></textarea>
+        </div>
+      </div>
+    </div>
+
+    <!-- space -->
+    <div class="d-flex" style="height: 100px">
+      <div class="vr"></div>
+    </div>
+    <!-- social media accounts -->
+    <hr />
+    <div class="container text-center px-2">
+      <div class="grid">
+        <a href="https://www.facebook.com/MMPV4" target="_blank"
+          ><img
+            src="Images/icons/fb.png"
+            alt="facebook logo"
+            style="width: 43px"
+            class="px-2"
+        /></a>
+        <a
+          href="https://www.instagram.com/fernandoroldanvalenzuela/"
+          target="_blank"
+          ><img
+            src="Images/icons/ig.png"
+            alt="instagram logo"
+            style="width: 43px"
+            class="px-2"
+        /></a>
+        <a href="https://twitter.com/home" target="_blank"
+          ><img
+            src="Images/icons/twitter.png"
+            alt="twitter logo"
+            style="width: 43px"
+            class="px-2"
+        /></a>
+        <a
+          href="https://www.youtube.com/@manolomiguelvalenzuela4877"
+          target="_blank"
+          ><img
+            src="Images/icons/yt.png"
+            alt="youtube logo"
+            style="width: 43px"
+            class="px-2"
+        /></a>
+      </div>
+    </div>
+    <!-- space -->
+    <div class="d-flex" style="height: 50px">
+      <div class="vr"></div>
+    </div>
+    <!-- footer -->
+    <div class="container-fluid text-center">
+      <p style="color: gray">
+        <a href="../bootcamp1/home.html" style="color: gray">Home | </a
+        ><a href="../bootcamp1/myabout.html" style="color: gray">About | </a
+        ><a href="../bootcamp1/mycontact.html" style="color: gray">Contact | </a
+        ><a href="../bootcamp1/mycareer.html" style="color: gray">Careers</a>
+      </p>
+      <p style="color: gray">
+        ©2023 fernandofixie-mp1_wd93; All rights reserved. All trademarks are
+        property <br />
+        of their respective owners in the Philippines and other countries.
+      </p>
+    </div>
+    <!-- closing script -->
+    <script src="myabout.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      autocomplete(document.getElementById("myInput"), countries);
+    </script>
+  </body>
+</html>
